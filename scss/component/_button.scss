@@ -8,29 +8,50 @@
     border-radius: 5px;
   }
   
-.btn:hover{
-  transition: all .5s ease-out;
-  background-color: lighten($color-main, 15%);
-}
-
+//buttons
   .default {
     background-color: $color-main;
+
+    &:hover{
+      transition: all .5s ease-out;
+      background-color: lighten($color-main, 15%);
+    }
   }
   
   .error {
     background-color: #e4757a;
+
+    &:hover{
+      transition: all .5s ease-out;
+      background-color: lighten(#e4757a, 15%);
+    }
   }
   
   .info {
     background-color: #927bc1;
+
+    &:hover{
+      transition: all .5s ease-out;
+      background-color: lighten(#927bc1, 15%);
+    }
   }
   
   .success {
     background-color: #63cc82;
+
+    &:hover{
+      transition: all .5s ease-out;
+      background-color: lighten(#63cc82, 15%);
+    }
   }
   
   .warning {
     background-color: #fd7856;
+
+    &:hover{
+      transition: all .5s ease-out;
+      background-color: lighten(#fd7856, 15%);
+    }
   }
 
 

@@ -386,29 +386,44 @@ template {
   border-radius: 5px;
 }
 
-.btn:hover {
-  transition: all 0.5s ease-out;
-  background-color: #9cecfd;
-}
-
 .default {
   background-color: #51ddfc;
+}
+.default:hover {
+  transition: all 0.5s ease-out;
+  background-color: #9cecfd;
 }
 
 .error {
   background-color: #e4757a;
 }
+.error:hover {
+  transition: all 0.5s ease-out;
+  background-color: #f1b5b8;
+}
 
 .info {
   background-color: #927bc1;
+}
+.info:hover {
+  transition: all 0.5s ease-out;
+  background-color: #bdafd9;
 }
 
 .success {
   background-color: #63cc82;
 }
+.success:hover {
+  transition: all 0.5s ease-out;
+  background-color: #9ddfb0;
+}
 
 .warning {
   background-color: #fd7856;
+}
+.warning:hover {
+  transition: all 0.5s ease-out;
+  background-color: #feb4a2;
 }
 
 @media (min-width: 768px) {
@@ -524,11 +539,24 @@ template {
 .container {
   padding: 0 10px;
 }
+@media (min-width: 768px) {
+  .container {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .row {
   display: flex;
   flex-direction: column;
   padding: 1em 10px;
+}
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
 }
 
 [class^=col] {
@@ -537,6 +565,17 @@ template {
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
+}
+@media (min-width: 768px) {
+  [class^=col] {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+  }
+  [class^=col] + [class^=col] {
+    margin-left: 10px;
+  }
 }
 
 .theme.col-1 {
@@ -592,32 +631,10 @@ template {
 }
 
 @media (min-width: 768px) {
-  .container {
-    max-width: 1400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .centered {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .row {
-    flex-direction: row;
-  }
-
-  [class^=col] {
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-    align-items: center;
-  }
-
-  [class^=col] + [class^=col] {
-    margin-left: 10px;
   }
 }
 .nav {
@@ -634,19 +651,16 @@ template {
   width: 100%;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-
 .nav-link:hover {
   color: #fff;
   background-color: #58e1c1;
 }
-
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
   }
-
   .nav-link {
     flex-basis: 100px;
   }

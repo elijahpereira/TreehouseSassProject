@@ -14,21 +14,19 @@
       background-color .2s ease-in-out, 
       color .2s ease-in-out;
   }
-}
-  
-  .nav-link:hover {
+
+  &-link:hover {
     color: $white;
     background-color: $color-hover;
   }
 
-  @media (min-width:$mq-sm){
-    .nav {
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
+    @media (min-width:$mq-sm){
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+  
+        &-link {
+          flex-basis: 100px;
+        }
     }
-    
-    .nav-link {
-      flex-basis: 100px;
-    }
-  }
+}
